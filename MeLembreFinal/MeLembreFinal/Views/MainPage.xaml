@@ -5,15 +5,15 @@
              prism:ViewModelLocator.AutowireViewModel="True" 
              x:Class="MeLembreFinal.Views.MainPage" 
              Title="Lembretes">
-    
-    <StackLayout VerticalOptions="FillAndExpand" Orientation="Vertical" Padding="3">
 
-        <ListView RowHeight="60" SeparatorVisibility="Default" ItemsSource="{Binding ListaAniversarios}" SelectedItem="{Binding AniversarioSelecionado, Mode=TwoWay}">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ImageCell Text="{Binding Titulo}" Detail="{Binding Detalhes}" ImageSource="{Binding Foto}"/>
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand" Orientation="Vertical" Padding="3">
+            <ListView RowHeight="60" SeparatorVisibility="Default" ItemsSource="{Binding ListaAniversarios}" SelectedItem="{Binding AniversarioSelecionado, Mode=TwoWay}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ImageCell Text="{Binding Titulo}" Detail="{Binding Detalhes}" ImageSource="{Binding Foto}"/>
 
-                    <!--<ViewCell>
+                        <!--<ViewCell>
                                     
                                     <StackLayout VerticalOptions="FillAndExpand" Orientation="Horizontal" Padding="20,10,0,10" Spacing="20">
                                         <Image Source="{Binding Foto}" WidthRequest="40" HeightRequest="40" VerticalOptions="Center" />
@@ -23,10 +23,10 @@
                                         <Label Text="{Binding Detalhes}" FontSize="Small" VerticalOptions="StartAndExpand"/>
                                     </StackLayout>
                                 </ViewCell>-->
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-
-    </StackLayout>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
 
 </ContentPage>

@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="MeLembreFinal.Views.CadAniversarioPage"
+             Title="Aniversario">
+
+    <ContentPage.Content>
+        <!--<ContentPage.ToolbarItems>
+            <ToolbarItem Order="Primary" Icon="save.png" Command="{Binding SaveItemCommand}"/>
+        </ContentPage.ToolbarItems>-->
+
+        <!--<ContentPage.Resources>
+            <ResourceDictionary>
+                <converters:DateTimeToDateTimeOffsetConverter x:Key="DateTimeToDateTimeOffsetConverter"/>
+            </ResourceDictionary>
+        </ContentPage.Resources>-->
+
+        <ScrollView>
+            <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Padding="10">
+
+                <StackLayout HorizontalOptions="FillAndExpand" Padding="0, 20, 0, 0">
+                    <Label Text="Informe o tipo de aniversário *" FontSize="Small" TextColor="Black"/>
+                    <Picker Title="Tipo de aniversário" ItemsSource="{Binding ListTiposAniver}" SelectedItem="{Binding TipoAniver, Mode=TwoWay}" HeightRequest="40"/>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="FillAndExpand" Padding="0, 20, 0, 0">
+                    <Label Text="Informe o nome da pessoa *" FontSize="Small" TextColor="Black"/>
+                    <Entry Text="{Binding NomePessoa}" Placeholder="Nome" Keyboard="Text" HeightRequest="40"/>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="FillAndExpand" Padding="0, 20, 0, 0">
+                    <Label Text="Informe a data de aniversário: " FontSize="Small" TextColor="Black"/>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <DatePicker Format="dd/MM/yyyy" HorizontalOptions="FillAndExpand" HeightRequest="40"/>
+                        <Image Source="calendario.png" HorizontalOptions="End" HeightRequest="40"/>
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="FillAndExpand" Padding="0, 20, 0, 0" BackgroundColor="#f7f7f7" Orientation="Vertical" VerticalOptions="FillAndExpand">
+                    <Label Text="Informe a antecedência que quer ser lembrado " FontSize="Medium" TextColor="Black" HorizontalOptions="Center"/>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="20">
+                        <Label Text="7 Dias" FontSize="Small" TextColor="Black"/>
+                        <Switch IsToggled="{Binding SeteDias}"/>
+                        <Label Text="1 Dia" FontSize="Small" TextColor="Black"/>
+                        <Switch IsToggled="{Binding UmDia}"/>
+                        <Label Text="No Dia" FontSize="Small" TextColor="Black"/>
+                        <Switch IsToggled="{Binding NoDia}"/>
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="FillAndExpand" Padding="0, 20, 0, 0">
+                    <Label Text="Detalhes" FontSize="Small" TextColor="Black"/>
+                    <Editor HeightRequest="120" Text="{Binding Detalhes}" />
+                </StackLayout>
+                
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+
+</ContentPage>
