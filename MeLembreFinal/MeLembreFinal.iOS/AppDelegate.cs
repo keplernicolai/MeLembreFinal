@@ -27,6 +27,12 @@ namespace MeLembreFinal.iOS
         {
             global::Xamarin.Forms.Forms.Init();
 
+            var navigationBarAppearace = UINavigationBar.Appearance;
+
+            navigationBarAppearace.TintColor = UIColor.FromRGB(255, 255, 255);
+            navigationBarAppearace.BarTintColor = UIColor.FromRGB(82, 201, 179);
+            navigationBarAppearace.SetTitleTextAttributes(new UITextAttributes { TextColor = UIColor.White });
+
             LoadApplication(new App(new iOSInitializer()));
 
             return base.FinishedLaunching(app, options);

@@ -31,12 +31,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Helpers\Util.cs" />
+    <Compile Include="MenuItens\MasterPageItem.cs" />
     <Compile Include="Models\Aniversario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\CadAniversarioPageViewModel.cs" />
+    <Compile Include="ViewModels\PrincipalMasterDetailPageViewModel.cs" />
     <Compile Include="Views\CadAniversarioPage.xaml.cs">
       <DependentUpon>CadAniversarioPage.xaml</DependentUpon>
     </Compile>
@@ -44,6 +46,9 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\MainPageViewModel.cs" />
+    <Compile Include="Views\PrincipalMasterDetailPage.xaml.cs">
+      <DependentUpon>PrincipalMasterDetailPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml">
@@ -96,6 +101,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\CadAniversarioPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\PrincipalMasterDetailPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

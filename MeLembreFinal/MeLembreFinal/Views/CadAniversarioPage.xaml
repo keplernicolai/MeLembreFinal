@@ -6,17 +6,18 @@
              x:Class="MeLembreFinal.Views.CadAniversarioPage"
              Title="Aniversario">
 
-    <ContentPage.Content>
-        <!--<ContentPage.ToolbarItems>
-            <ToolbarItem Order="Primary" Icon="save.png" Command="{Binding SaveItemCommand}"/>
-        </ContentPage.ToolbarItems>-->
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Order="Primary" Icon="save.png"/>
+    </ContentPage.ToolbarItems>
 
-        <!--<ContentPage.Resources>
+    <!--<ContentPage.Resources>
             <ResourceDictionary>
                 <converters:DateTimeToDateTimeOffsetConverter x:Key="DateTimeToDateTimeOffsetConverter"/>
             </ResourceDictionary>
         </ContentPage.Resources>-->
 
+    <ContentPage.Content>
+       
         <ScrollView>
             <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Padding="10">
 

@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.Practices.Unity;
 using Prism.Unity;
 using MeLembreFinal.Views;
+using Xamarin.Forms;
 
 namespace MeLembreFinal
 {
@@ -16,13 +17,15 @@ namespace MeLembreFinal
         {
             InitializeComponent();
 
-            NavigationService.NavigateAsync("CadAniversarioPage");
+            NavigationService.NavigateAsync("PrincipalMasterDetailPage/NavigationPage/MainPage");
         }
 
         protected override void RegisterTypes()
         {
+            Container.RegisterTypeForNavigation<NavigationPage>();
             Container.RegisterTypeForNavigation<MainPage>();
             Container.RegisterTypeForNavigation<CadAniversarioPage>();
+            Container.RegisterTypeForNavigation<PrincipalMasterDetailPage>();
         }
     }
 }
